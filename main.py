@@ -61,9 +61,9 @@ def edit_caption(bot, update: pyrogram.types.Message):
             caption = update.caption
             if caption:
                 # Replace all usernames with @Ms_Update_channel
-                caption = re.sub(r"@[A-Za-z0-9_]+", "@Ms_Update_channel", caption)
+                caption = re.sub(r"@[A-Za-z0-9_]+", "@MSXUpdate", caption)
                 # Append desired text
-                caption += "\n\n<b>〽️Join @Ms_Update_channel</b>"
+                caption += "\n\n<b>〽️Join @MSXUpdate</b>"
                 update.edit(caption)
         except pyrogram.errors.FloodWait as FloodWait:
             asyncio.sleep(FloodWait)
